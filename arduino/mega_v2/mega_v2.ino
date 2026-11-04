@@ -1,5 +1,5 @@
 // SAOS v2 Mega 2560 firmware (first hardware-facing draft).
-// STATUS: syntax-checked on a PC with stubs only. NOT compiled with avr-gcc, NOT run on hardware.
+// STATUS: compiles with avr-gcc 7.3.0 for Mega 2560 (Arduino IDE 2, 2026-11-05): 16794 B flash (6 %), 758 B RAM (9 %). NOT yet run on hardware.
 // Control logic, protocol and calibration come from the tested core (saos_core / saos_proto / saos_calib).
 // Everything marked [UNVERIFIED] is a hardware conversion that must be checked against a reference (docs/HARDWARE_TEST_PLAN.md).
 #include <avr/wdt.h>
