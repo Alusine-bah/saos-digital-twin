@@ -110,3 +110,16 @@ At 100 mg/L alkalinity a net loss of 2.9 mg/L/day lowers pH by only about 0.013 
 
 ## Still needed from you (cannot be found in the literature)
 If you remember them, the real tank volume, fish count and daily feed replace the estimates above. The most valuable measurement is the water's alkalinity (a cheap KH test kit): it sets how fast pH reacts. `alk_loss_from_feed(feed_g_per_day, volume_l, plant_offset=0.94)` then gives the net loss.
+
+## Topic 7: Bangladesh evaporation (checked 2026-11-04)
+
+- [CITED] Amirulhussain, M. (1986). Evaporation over Bangladesh. MAUSAM 37(3), 373-376. Five years of Class-A pan data, 19 stations. Highest mean monthly 93.2 mm (April); mean annual 1142-1636 mm in the north-west and south-east; lowest annual 700 mm (Sylhet); December minimum 40-60 mm/month.
+- [DERIVED] Annual range 1142-1636 mm = 3.1-4.5 mm/day pan; Sylhet 700 mm = 1.9 mm/day. A pan over-reads open water (pan coefficient commonly ~0.7), so open-tank evaporation is about 2-3 mm/day.
+- Consequence: our 0.17 %/h level loss (about 5 mm/day) is plausible once plant transpiration is added to evaporation, but it is not separately validated. Keep as [DERIVED], flagged.
+- Caveat: 1986 data, pan not tank. Abstract only (full text not read).
+
+## Topic 8: Nutrient uptake and battery life (status)
+
+- Nutrient uptake per day: NOT found. Inoue et al. 2025 (Agriculture 15(13), 1350; preprint 202505.0793) report only mean tank EC set-points (about 0.5-3.1 dS/m), not daily rates. Keep TDS drift as [ESTIMATE].
+- Lead-acid cycle life vs depth of discharge: only forum/blog hits found. Keep 50 % DoD as [ASSUMED]; need a manufacturer datasheet (cycle-life curve) for the actual battery.
+- Related work candidate: Wan et al. 2022, modularized IoT aquaponics with edge computing (PMC9739085). Page blocked by CAPTCHA, not read. Do not cite until verified.
