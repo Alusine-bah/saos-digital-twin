@@ -39,7 +39,7 @@ pulse-and-wait pH dosing, RTC photoperiod light control and safe shut-off on inv
 Not yet verified: compilation with avr-gcc for the Mega (no AVR toolchain was available when this was written).
 
 ## v2 link protocol (Stage 2)
-`core/include/saos_proto.h`: COBS-framed binary frames with CRC-16, sequence numbers, PING/PONG, command/ACK with
+`core/include/saos_proto.h`: COBS-framed binary frames with CRC-16, sequence numbers, MSG_PING/MSG_PONG, command/ACK with
 echoed timestamps (so latency and response time are measured on one clock). 25-byte telemetry payload, 32 bytes on the wire
 (v1 was an ASCII frame of roughly 200+ bytes at 9600 baud).
 

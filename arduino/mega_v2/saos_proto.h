@@ -13,7 +13,7 @@
 
 namespace saos { namespace proto {
 
-enum MsgType : uint8_t { TELEMETRY = 1, COMMAND = 2, ACK = 3, PING = 4, PONG = 5 };
+enum MsgType : uint8_t { TELEMETRY = 1, COMMAND = 2, ACK = 3, MSG_PING = 4, MSG_PONG = 5 };
 
 static const uint8_t MAX_PAYLOAD = 40;
 static const uint8_t MAX_RAW  = 1 + 2 + MAX_PAYLOAD + 2;

@@ -81,10 +81,10 @@ void pack(const Command& c, uint16_t seq, Message& m) { m.type = COMMAND; m.seq 
 bool unpack(const Message& m, Command& c) { if (m.type != COMMAND || m.len != 6) return false; R r = { m.payload, 0 }; c.t_tx = r.u32(); c.device = r.u8(); c.value = r.u8(); return true; }
 void pack(const Ack& a, uint16_t seq, Message& m) { m.type = ACK; m.seq = seq; W w = { m.payload, 0 }; w.u32(a.t_tx_echo); w.u8(a.device); w.u8(a.applied); w.u16(a.proc_ms); m.len = w.n; }
 bool unpack(const Message& m, Ack& a) { if (m.type != ACK || m.len != 8) return false; R r = { m.payload, 0 }; a.t_tx_echo = r.u32(); a.device = r.u8(); a.applied = r.u8(); a.proc_ms = r.u16(); return true; }
-void pack(const Ping& p, uint16_t seq, Message& m) { m.type = PING; m.seq = seq; W w = { m.payload, 0 }; w.u32(p.t_tx); m.len = w.n; }
-bool unpack(const Message& m, Ping& p) { if (m.type != PING || m.len != 4) return false; R r = { m.payload, 0 }; p.t_tx = r.u32(); return true; }
-void pack(const Pong& p, uint16_t seq, Message& m) { m.type = PONG; m.seq = seq; W w = { m.payload, 0 }; w.u32(p.t_tx_echo); w.u32(p.t_rx_ms); m.len = w.n; }
-bool unpack(const Message& m, Pong& p) { if (m.type != PONG || m.len != 8) return false; R r = { m.payload, 0 }; p.t_tx_echo = r.u32(); p.t_rx_ms = r.u32(); return true; }
+void pack(const Ping& p, uint16_t seq, Message& m) { m.type = MSG_PING; m.seq = seq; W w = { m.payload, 0 }; w.u32(p.t_tx); m.len = w.n; }
+bool unpack(const Message& m, Ping& p) { if (m.type != MSG_PING || m.len != 4) return false; R r = { m.payload, 0 }; p.t_tx = r.u32(); return true; }
+void pack(const Pong& p, uint16_t seq, Message& m) { m.type = MSG_PONG; m.seq = seq; W w = { m.payload, 0 }; w.u32(p.t_tx_echo); w.u32(p.t_rx_ms); m.len = w.n; }
+bool unpack(const Message& m, Pong& p) { if (m.type != MSG_PONG || m.len != 8) return false; R r = { m.payload, 0 }; p.t_tx_echo = r.u32(); p.t_rx_ms = r.u32(); return true; }
 
 bool Decoder::feed(uint8_t b, Message& out) {
     if (b != 0x00) {
