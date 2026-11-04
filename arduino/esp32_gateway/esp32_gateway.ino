@@ -1,5 +1,5 @@
 // SAOS v2 ESP32 gateway (first hardware-facing draft).
-// STATUS: syntax-checked on a PC with stubs only. NOT compiled for the ESP32 toolchain, NOT run on hardware.
+// STATUS: compiles for ESP32 Dev Module (Arduino IDE 2.3.10, 2026-11-05): 924868 B flash (70 %), 47624 B RAM (14 %). NOT yet run on hardware.
 // The ESP32 makes no control decisions: it relays operator requests and shows what the Mega reports.
 #include <WiFi.h>
 #include <WebServer.h>

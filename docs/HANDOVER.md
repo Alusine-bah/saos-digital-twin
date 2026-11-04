@@ -33,4 +33,4 @@ Never commit Wi-Fi passwords or API keys (`arduino/esp32_gateway/wifi_secrets.h`
 
 ## Build status (2026-11-05)
 - mega_v2.ino: compiled in Arduino IDE 2 for Arduino Mega 2560 (avr-gcc 7.3.0): 16,794 B flash (6 %), 758 B RAM (9 %). The first build failed because PING collides with the AVR Port G register; renamed to MSG_PING/MSG_PONG. Not yet run on hardware.
-- esp32_gateway.ino: not yet compiled with the ESP32 toolchain.
+- esp32_gateway.ino: compiled for ESP32 Dev Module (Arduino IDE 2.3.10): 924,868 B flash (70 %), 47,624 B RAM (14 %). Not yet run on hardware.
