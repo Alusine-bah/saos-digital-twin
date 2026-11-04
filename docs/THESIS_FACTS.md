@@ -7,3 +7,7 @@
 - Measured in thesis: latency 2 ms mean (max 23.3 ms), PDR 93 %, response 0.029 s; the thesis says UART 115200 baud, but the recovered firmware uses 9600. Flag as a discrepancy.
 - Thesis benchmarks cited: Wan [5] 99.2 % PDR at 90 m; Fathi [22] latency < 1.5 s; Alselek [7] cost GBP 3,800+.
 - Budget BDT 15,000.
+
+## Team answers (2026-11-04)
+- Testing month: September (Dhaka mean ~29 C, high 32, low 26; weather2travel.com). amb_swing_c set 3.0.
+- From photo [ESTIMATE]: plastic storage-box tank, about 25 L water; about 5-8 dark fish (6 used); two shallow grow trays about 35 x 25 cm. Feed amount and ambient not recorded.

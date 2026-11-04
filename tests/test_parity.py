@@ -95,6 +95,6 @@ def test_parity_with_dwell_timers(tmp_path):
     bad, n = parity(with_(Params(), days=2.0, min_on_s=300.0, min_off_s=300.0), ["min_on_s=300", "min_off_s=300"], tmp_path)
     assert bad == 0, f"{bad} mismatching outputs over {n} steps"
     # and the dwell actually reduced fan switching versus v1
-    v1, _ = run(with_(Params(), days=2.0))
-    v2, _ = run(with_(Params(), days=2.0, min_on_s=300.0, min_off_s=300.0))
+    v1, _ = run(with_(Params(), days=2.0, amb_swing_c=5.0))
+    v2, _ = run(with_(Params(), days=2.0, min_on_s=300.0, min_off_s=300.0, amb_swing_c=5.0))
     assert v2["toggles_fan_day"] < 0.5 * v1["toggles_fan_day"]

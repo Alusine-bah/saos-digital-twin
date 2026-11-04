@@ -49,3 +49,7 @@ The two fans exist to drive heat out of the growing space; the system was design
 that they cool the electronics compartment conflicts with this and probably comes from an earlier (7th-semester) draft. Designer intent is used:
 the DHT11 measures grow-area air and the greenhouse heat-balance model applies. Both fans share one relay in the recovered firmware, so they are modelled as one unit.
 Fan airflow and enclosure volume are unrecovered: [ESTIMATE] 1.0-1.5 air changes per minute (SRAC 5008). Scenario S11 covers indoor mode [ESTIMATE].
+
+## Update 2026-11-04: September Dhaka ambient (swing 3 C instead of 5 C)
+- Validation is now 9 of 12 pass. R6 (relay switching) now passes: fan toggles 0.2/day vs 155 before. The earlier fan-chatter finding depended on the assumed 5 C swing; the paper must say so (hysteresis chatter needs ambient near the 30/28 C thresholds). Air <35 C: 63.1 %, water in 25-30 C: 6.3 % (outdoor), blackout under 30 % sun: 27.9 h.
+- redesign_study.md, climate_sensitivity.md and paper numbers were produced with swing 5 and need re-running before they are quoted.

@@ -66,7 +66,7 @@ class Params:
     tds_dose_per_s: float = 2.5         # ppm per second of nutrient pump
     level_loss_per_h: float = 0.17      # [DERIVED] % of the 12 cm level scale per hour: about 5 mm/day (3.7 mm/day pan evaporation, equatorial Central Africa, Riou 1984, plus ~1 mm/day lettuce use) / 1.2 mm per %. Was 0.9 [ASSUMED], about 5x too high. Check: 5 mm of a 14-29 L tank = 0.6-1.2 L/day = 1.7-3.4 % of a 35 L system vs UVI make-up 2.4 % and 1-1.5 % in extension guidance
     level_refill_per_s: float = 0.04    # % per second tank pump on
-    tank_volume_l: float = 100.0
+    tank_volume_l: float = 25.0         # [ESTIMATE] water in the fish tank, from the prototype photo (storage box), about 20-25 L
 
     ph_shock_h: float = -1.0            # scenario knob: time of acid/base shock (h), -1 = none
     ph_shock_delta: float = 0.0
@@ -86,8 +86,8 @@ class Params:
     cloud_factor: float = 1.0           # scenario knob
 
     # ---- ambient ---------------------------------------------------------
-    amb_mean_c: float = 29.0            # [ASSUMED] Sub-Saharan / Bangladesh-like
-    amb_swing_c: float = 5.0
+    amb_mean_c: float = 29.0            # [CITED] Dhaka September: high 32, low 26 C (weather2travel.com), mean about 29. Testing month confirmed by team as September
+    amb_swing_c: float = 3.0            # [DERIVED] half of the 32-26 C Dhaka September range (outdoor; indoor swing may differ)
     heatwave_c: float = 0.0             # scenario knob (added to ambient)
 
     # ---- link ------------------------------------------------------------

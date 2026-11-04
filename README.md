@@ -1,5 +1,3 @@
-**Live demo:** https://saos-digital-twin.streamlit.app
-
 # SAOS Simulator
 
 Software twin of the SAOS aquaponics controller (Arduino Mega 2560 + ESP32 gateway), built from
@@ -96,4 +94,3 @@ Mutation check: heartbeat 9 s makes both gateway tests fail.
 
 ## Live demo
 `pip install -r requirements.txt` then `streamlit run app.py`: change weather, fan, pH, TDS, water and power parameters and see the simulated result and pass/fail checks. See `docs/GITHUB_SETUP.md` for GitHub and online hosting.
-
