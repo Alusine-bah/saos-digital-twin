@@ -1,0 +1,4 @@
+build/
+__pycache__/
+.pytest_cache/
+arduino/esp32_gateway/wifi_secrets.h
